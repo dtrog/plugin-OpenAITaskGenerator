@@ -1,0 +1,17 @@
+/* Example CSS */
+.project-header-extra {
+    float: right;
+    margin-right: 5px;
+}
+
+/* Adjust the width of the search form */
+.form-search {
+    max-width: auto; /* Adjust this value as needed */
+}
+
+/* Position the project header extra button on the same line */
+.project-header-extra {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Space between search form and the Purchases button */
+}
