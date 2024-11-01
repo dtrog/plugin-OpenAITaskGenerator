@@ -13,17 +13,26 @@
                         foreach($tasklist as $task) {
                             echo '<li>';
                             $counter = $counter + 1;
-                            print($counter.'. '.$task['title'].'<br>'.
+                            print($counter.': '.$task['title'].'<br>'.
                             $task['description'].'<br>');
+                            if($task['subtasks']) {
+                                $subcounter = 0;
+                                echo '<ul>';
+                                foreach($task['subtasks'] as $subtask) {
+                                    $subcounter = $subcounter + 1;
+                                    echo '<li>';
+                                    print($counter.".".$subcounter.": ".$subtask['title']."<br>");
+                                    echo '</li>';
+                                }
+                               echo '<ul>';
+                            }
+
                             echo '</li>';
                             echo '</br>';
                         }
                     ?>
                 </ol>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary"><?= t('Import Tasks') ?></button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><?= t('Cancel') ?></button>
-                </div>
+                <?= $this->modal->submitButtons(array('submitLabel' => t('Create Tasks') )) ?>
             </form>
         </div>
     </div>

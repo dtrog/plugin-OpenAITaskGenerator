@@ -81,7 +81,7 @@ class TaskGeneratorController extends BaseController
                     category moet beperkt worden tot 1 woord,
                     subtasks voor een taak moeten als array toegevoegd worden aan de taak in het veld subtasks,
                     alle time_estimated velden moeten numeriek zijn waar elk getal het aantal uren representeert.
-
+                    elke subtask moet 'title' en 'time_estimated' bevatten.
                     Antwoord enkel met de raw PHP array";
        
         $answer = $client->chat()->create([
