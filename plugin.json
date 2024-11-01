@@ -1,0 +1,10 @@
+{
+    "plugin": "OpenAITaskGenerator",
+    "title": "OpenAI Task Generator",
+    "description": "Generate tasks based on a project goal using OpenAI and add them to the project.",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "license": "MIT",
+    "homepage": "https://example.com",
+    "compatible_version": ">=1.2.20"
+}

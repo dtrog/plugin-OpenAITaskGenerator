@@ -1,0 +1,19 @@
+{
+    "name": "kanboard/openai-task-bot",
+    "description": "A Kanboard plugin to generate tasks from goals using OpenAI",
+    "require": {
+        "openai-php/client": "^0.10.2",
+        "symfony/http-client": "^7.1",
+        "nyholm/psr7": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kanboard\\Plugin\\OpenAITaskBot\\": "."
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
