@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\OpenAITaskGenerator;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
@@ -19,6 +20,11 @@ class Plugin extends Base
          // Load custom CSS
          //$this->hook->on('template:layout:css', array('template' => 'plugins/OpenAITaskGenerator/Assets/css/openaitaskgenerator.css'));
 
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
 
 
